@@ -1,4 +1,4 @@
-warn("The script has been temporarily disabled.
+print("The script has been temporarily disabled.
 Although it was working, it caused lag and was detected by the admins.
 
 We are currently working on a fix — stay tuned and thank you for your patience!")
