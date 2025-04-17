@@ -12,7 +12,8 @@ local SPECIAL_USERS = {
     "phashadower",
     "bc_baconthe900",
     "XEndisz",
-    "Godhung17"
+    "Godhung17",
+    "BaconReallyl"
 }
 
 if not setclipboard then
