@@ -9,7 +9,7 @@ local DISCORD_LINK = "https://discord.gg/TGjSwUbucf"
 local IS_MOBILE = UserInputService.TouchEnabled
 
 local SPECIAL_USERS = {
-    "phashadower",
+    "Polaseeee",
     "bc_baconthe900",
     "XEndisz",
     "Godhung17",
