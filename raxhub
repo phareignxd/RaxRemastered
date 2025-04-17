@@ -10,8 +10,10 @@ local IS_MOBILE = UserInputService.TouchEnabled
 
 local SPECIAL_USERS = {
     "phashadower",
-    "DemonSlayer21681",
-    "XEndisz"
+    "bc_baconthe900",
+    "XEndisz",
+    "Godhung17",
+    "BaconReallyl"
 }
 
 if not setclipboard then
