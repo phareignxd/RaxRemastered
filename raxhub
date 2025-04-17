@@ -5,7 +5,7 @@ local RunService = game:GetService("RunService")
 local TextService = game:GetService("TextService")
 
 local CORRECT_KEY = "RAXREMASTERED"
-local DISCORD_LINK = "https://discord.gg/TGjSwUbucf"
+local DISCORD_LINK = "https://discord.gg/g76RWUGNPs"
 local IS_MOBILE = UserInputService.TouchEnabled
 
 local SPECIAL_USERS = {
