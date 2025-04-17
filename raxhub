@@ -10,10 +10,8 @@ local IS_MOBILE = UserInputService.TouchEnabled
 
 local SPECIAL_USERS = {
     "phashadower",
-    "bc_baconthe900",
-    "XEndisz",
-    "Godhung17",
-    "BaconReallyl"
+    "DemonSlayer21681",
+    "XEndisz"
 }
 
 if not setclipboard then
@@ -557,7 +555,7 @@ local function CreateMainGUI()
     task.wait(2.1)
     loadingScreen:Destroy()
     
-loadstring(game:HttpGet("https://pastefy.app/mug2j6Hz/raw", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/phareignxd/RaxRemastered/refs/heads/main/hitboxbypasserandanticheatbypass", true))()
 
     local ChaosGUI = Instance.new("ScreenGui")
     ChaosGUI.Name = "RAX_Remastered_Hub"
@@ -915,94 +913,9 @@ loadstring(game:HttpGet("https://pastefy.app/mug2j6Hz/raw", true))()
     local SettingsButtonsLayout = PVPButtonsLayout:Clone()
     SettingsButtonsLayout.Parent = SettingsButtonsHolder
 
-    local function enableHitboxBypasser()
-    if getgenv().ED_AntiKick then return end
 
-    local getgenv, getnamecallmethod, hookmetamethod, hookfunction, newcclosure, checkcaller, lower, gsub, match =
-        getgenv, getnamecallmethod, hookmetamethod, hookfunction, newcclosure, checkcaller, string.lower, string.gsub, string.match
-
-    local cloneref = cloneref or function(...) return ... end
-    local clonefunction = clonefunction or function(...) return ... end
-
-    local Players = cloneref(game:GetService("Players"))
-    local LocalPlayer = cloneref(Players.LocalPlayer)
-    local StarterGui = cloneref(game:GetService("StarterGui"))
-    local SetCore = clonefunction(StarterGui.SetCore)
-    local FindFirstChild = clonefunction(game.FindFirstChild)
-
-    local CompareInstances = (CompareInstances and function(Instance1, Instance2)
-        if typeof(Instance1) == "Instance" and typeof(Instance2) == "Instance" then
-            return CompareInstances(Instance1, Instance2)
-        end
-    end) or function(Instance1, Instance2)
-        return typeof(Instance1) == "Instance" and typeof(Instance2) == "Instance"
-    end
-
-    local CanCastToSTDString = function(...)
-        return pcall(FindFirstChild, game, ...)
-    end
-
-    getgenv().ED_AntiKick = {
-        Enabled = true,
-        SendNotifications = false,
-        CheckCaller = false
-    }
-
-    local OldNamecall
-    OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
-        local self, message = ...
-        local method = getnamecallmethod()
-
-        local isCallerValid = true
-        if ED_AntiKick.CheckCaller then
-            local success, result = pcall(checkcaller)
-            isCallerValid = success and result or true
-        end
-
-        if (isCallerValid or not ED_AntiKick.CheckCaller)
-            and CompareInstances(self, LocalPlayer)
-            and gsub(method, "^%l", string.upper) == "Kick"
-            and ED_AntiKick.Enabled then
-
-            if CanCastToSTDString(message) then
-                return
-            end
-        end
-
-        return OldNamecall(...)
-    end))
-    local originalNamecall
-    local hitboxBypassActive = false
-
-local function enableHitboxBypasser()
-    if hitboxBypassActive then return end
-    hitboxBypassActive = true
-    loadstring(game:HttpGet("https://pastefy.app/Xo3vQ1Kc/raw", true))()
-end
-
-local function disableHitboxBypasser()
-    if hitboxBypassActive then
-        hitboxBypassActive = false
-    end
-end
-
-   
     local PVPFeatures = {
-        {
-            Name = "HitboxBypasser",
-            Text = "🥊 Hitbox Bypasser",
-            Callback = function()
-                hitboxBypassActive = not hitboxBypassActive
-                if hitboxBypassActive then
-                    enableHitboxBypasser()
-                    createNotification("Hitbox Bypasser", "Enabled Hitbox Bypasser", 3)
-                else
-                    disableHitboxBypasser()
-                    createNotification("Hitbox Bypasser", "Disabled Hitbox Bypasser", 3)
-                end
-            end,
-            Parent = PVPButtonsHolder
-        },
+        
         {
             Name = "HitboxExpander",
             Text = "🔴 Hitbox Expander",
@@ -1082,7 +995,7 @@ end
         },
         {
             Name = "SpeedHack",
-            Text = "⚡ Speed Hack",
+            Text = "⚡ Speed Script",
             Callback = function()
                 local player = game.Players.LocalPlayer
                 local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
@@ -1668,9 +1581,9 @@ local function ShowKeySystem()
     StatusLabel.Parent = MainFrame
 
     local DiscordButton = Instance.new("TextButton")
-    DiscordButton.Font = Enum.Font.Gotham
     DiscordButton.Text = "GET KEY FROM DISCORD"
-        DiscordButton.TextColor3 = Color3.fromRGB(200, 200, 255)
+    DiscordButton.Font = Enum.Font.Gotham
+    DiscordButton.TextColor3 = Color3.fromRGB(200, 200, 255)
     DiscordButton.TextSize = 14
     DiscordButton.BackgroundColor3 = Color3.fromRGB(50, 50, 80)
     DiscordButton.Size = UDim2.new(0.8, 0, 0.1, 0)
